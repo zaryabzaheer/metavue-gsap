@@ -1,0 +1,399 @@
+/* Font Families */
+@font-face {font-family: 'zuume-extralight';src: url('../fonts/Zuume-ExtraLight.woff') format('woff2');font-weight: 300;font-style: normal;}
+@font-face {font-family: 'zuume-medium';src: url('../fonts/Zuume-Medium.woff') format('woff2'),url('../fonts/Zuume-MediumItalic.woff') format('woff');font-weight: 500;font-style: normal;}
+@font-face {font-family: 'zuume-bold';src: url('../fonts/Zuume-Bold.woff') format('woff2');font-weight: 700;font-style: normal;}
+@font-face {font-family: 'zuume-semibold';src: url('../fonts/Zuume-SemiBold.woff') format('woff2');font-weight: 700;font-style: normal;}
+@font-face {font-family: 'zuume-extra-bold';src: url('../fonts/Zuume-ExtraBold.woff') format('woff2');font-weight: 700;font-style: normal;}
+@font-face {font-family: 'zuume-regular';src: url('../fonts/Zuume-Regular.woff') format('woff2');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'poppins-regular';src: url('../fonts/poppins-regular.woff2') format('woff2'),url('../fonts/poppins-regular.woff') format('woff');font-weight: 400;font-style: normal;}
+@font-face {font-family: 'poppins-semibold';src: url('../fonts/poppins-semibold.woff2') format('woff2'),url('../fonts/poppins-semibold.woff') format('woff');font-weight: 700;font-style: normal;}
+body{overflow-x: hidden;overflow-y: hidden;}
+.container-fluid{padding-left: 30px;padding-right: 30px;}
+/* Custom Scrollbar */
+  * {scrollbar-width: auto;scrollbar-color: #8f54a0 #ffffff;}
+  *::-webkit-scrollbar {width: 16px;display: none;}
+  *::-webkit-scrollbar-track {background: #000000;}
+  *::-webkit-scrollbar-thumb {background-color: #352478;border-radius: 10px;border: 3px solid #eba403;}
+/* Tap to start */
+.tap-to-start{width:100%; position: fixed;z-index: 9999;height: 100vh;background-color: black;}
+  /* loader start */
+.world-image{height: 600px;width: 600px;border-radius: 50%;overflow: hidden;}
+.world-image img{position: relative;left: 50%;transform: translateX(-50%);}
+.stars-image img{display: none; position: absolute;top: 0; opacity: 0.2;  background-image: url('../images/Stars.png');height: 100vh;background-repeat: no-repeat;background-size: cover; padding:0px 200px ; width: 100%;}
+.loader{ display: none;}
+.world-image {position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);}
+.smokey-rocket-image img,.moon-image img ,.planet4-image img,.planet1-image img, .planet2-image img,.planet3-image img,.small-rocket-image img,.small-rocket-image-1 img{position: absolute;} 
+.smokey-rocket-image img{top: 50%;left:50%;transform: translateY(-50%);}
+/* loader end */
+/* navbar start */
+.navbar{position: absolute;width: 100%;z-index: 9999;}
+.navbar-brand {color: #ffff;font-family: 'zuume-bold'; cursor: pointer;font-size: 30px;}
+.navbar-brand:hover{color: #ffff;}
+.login-btn a{position: relative; color: #ffff; border: none;font-family: 'zuume-bold'; font-size: 20px; }
+.reveal-btn a{position: relative; background-color: #ffff; color: #375e90; border: none;font-family: 'zuume-bold';font-size: 20px;width: 90px; border-radius: 0px;}
+.reveal-btn a:hover,.login-btn a:hover {color: #f0094a;background-color: #ffff;box-shadow:none;}
+.reveal-btn a:before,.reveal-btn a:after,.login-btn a:before,.login-btn a:after{content:'';position:absolute;top:0;right:0;height:2px;width:0;background: #f0094a;box-shadow:-1px -1px 5px 0px #fff,7px 7px 20px 0px #0003,4px 4px 5px 0px #0002;transition:400ms ease all;}
+.reveal-btn a:after,.login-btn a:after{right:inherit;top:inherit;left:0;bottom:0;}
+.reveal-btn a:hover:before,.reveal-btn a:hover:after,.login-btn a:hover:before,.login-btn a:hover:after{width:100%;transition:800ms ease all;}
+/* Banner area start */
+.banner-img{position: fixed;top: 0;width: 100%;height: auto;opacity: 0.9;}
+.banner{position: fixed;width: 100%;height: 100vh;}
+.banner-content{position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);z-index: 99999;}
+.banner-content h4{position: fixed;font-size: 39px;top: -25%;letter-spacing: 15px; color: #ffff;margin-bottom: 0;font-weight: normal;}
+.banner-content h1 {font-size: 210px;line-height: 220px;letter-spacing: 14px; color: #ffff; font-family: 'zuume-extra-bold';display: flex;}
+.banner-content h1 span{display: inline-block;}
+.banner-content h4{position: fixed;font-size: 39px;top: -25%;}
+.surface-image{position: absolute;width: 100%;right: 0;bottom: 0;padding: 0;}
+.waves-image img{position: absolute;bottom: 0;right: 0;}
+.mars-side-image img{position: absolute;right: 0%;}
+.mars img{width: 100px;}
+.users{top:30%;position: relative; z-index: 999;}
+.users .user-1{position: relative; left: -30%;}
+.users .user-2{ position:relative; top: 10%; width: 400px;}
+.users .user-3{position: relative; top: 160px; left: 25%;}
+.users .object-1 {position: absolute;left: 16%; top: -16%; z-index: 1;}
+.users .object-2 {position: absolute;right: -23%; top: 4%; z-index: 0;}
+.users .object-3 {position: absolute;right: 13%; top: 34%;z-index: 999;}
+#header{position: relative;}
+.globe-side-image img{position: absolute;right: 25%;top: 7%;}
+/* who-we-are start */
+.scrollmagic-pin-spacer{padding-top: 5700px !important; padding-bottom: 0px !important;bottom: 0 !important;min-height: 100vh !important;}
+.who-we-are{ position: absolute;top: 30%;max-width: 1320px;left: 50%;width: 80%;transform: translateX(-50%);}
+.who-we-are-content p{position: relative;opacity: 0;}
+.who-we-are h2{font-size: 160px;color: #FFFFFF;  font-family: 'zuume-extra-bold';margin-bottom: 30px;}
+.who-we-are-content p{ font-size: 24px;color: #FFFFFF;letter-spacing: 0px;color: #FFFFFF;}
+.who-we-are .mars-side-image { position:absolute; right: 2%;top: -0%; width: 100%; }
+.lady{position: absolute;left: -15%;top: -3%;opacity: 0;transform: rotate(29deg);}
+.who-we-are-globe img{position: absolute;right: 20%;top: 10%;}
+.who-we-are-globe-1 img{position: absolute;right: 11%; top: 32%;}
+/* Avatar Girl Start */
+.avatar-girl{position: relative;opacity: 0; min-height: 100vh;}
+.avatar-girl .avatar{position: fixed;left: 0;top: 0%;}
+.avatar-girl .content{ width: 630px;position: relative;left: 33%;transform: translate(-50%,-50%);z-index: 1;}
+.avatar-girl .content h2{font-size: 130px;color: #FFFFFF;opacity: 1;font-family: 'zuume-extra-bold';position: fixed;top: -360px;}
+.avatar-girl .content p{text-align: left;font-size: 24px; letter-spacing: 0px;color: #FFFFFF;opacity: 1;position: absolute;top: 200px;opacity: 0;}
+/* Road Map Start */
+.road-map{ position: relative; background-color:#0e0f12; padding-top: 120px;top: 750vh;}
+.road-map .content h2{letter-spacing: 0px;color: #FFFFFF;font-size: 64px;font-family: 'zuume-bold';}
+.road-map .content p{margin-bottom: 100px;font-size: 20px;letter-spacing: 0px;color: #FFFFFF;font-family: 'poppins-regular';}
+.slick-slider .slick-slide {padding: 0 15px;}
+.road-map .road-map-carousal .card{background-color: transparent;}
+.road-map .road-map-carousal .card figure{margin-bottom: 0px;}
+.slick-initialized .slick-slide.card > .content-box-width{display: none;}
+.road-map .road-map-carousal .slick-slide.slick-current > .content-box-width{display: block;}
+.content-box-width{display: none;}
+.road-map .road-map-carousal .slick-slide.slick > .content-box-width{display: none;}
+.content-box-width{width: 100%;position: absolute;top: 15px;left: -95%;}
+.content-box-width h2{ opacity:0.9;font-size: 30px;color: #FFFFFF;text-align: left;font-family: 'zuume-regular';}
+.content-box-width strong{font-size: 60px;color: #FFFFFF;font-family: 'zuume-bold';}
+.content-box-width p{font-size: 20px;color: #FFFFFF;font-family: 'poppins-semibold';width: 350px;}
+/* Reveal start */
+.reveal{top: 750vh; background-color: #0e0f12;padding: 100px 0px;border-bottom: 3px solid #5e5e60; position: relative;}
+.reveal .content h2{font-size: 64px;letter-spacing: 0px;color: #FFFFFF;font-family: 'zuume-bold';}
+.reveal .content p{font-size: 20px;letter-spacing: 0px;color: #FFFFFF;font-family: 'poppins-regular'; margin-bottom: 60px;}
+.reveal .content button{color: #08080A;background-color: #ffffff;border: none;width: 168px; padding: 10px 0px;}
+.reveal .content button:focus{box-shadow: none; border: none;}
+/* Footer start */
+footer{top: 750vh; background-color:#060101; padding-top: 80px; position: relative;}
+footer .content p{color: #ffffff;width: 550px; font-size: 18px;}
+footer ul li a{color: #ffffff;text-decoration: none; font-size: 18px;}
+footer ul li{padding: 8px 0px;text-align: start;}
+footer ul li a:hover{color: #ffffff;}
+footer .copyright{    color: #ffffff6e;margin-bottom: 0px; font-size: 18px; padding-top: 60px;}
+/* MEDIA QUERY */
+@media (max-width:1799px)  {
+/* banner start */
+.banner-content h4{font-size: 25px;line-height: 30px;white-space: nowrap;letter-spacing: 13px;}
+.banner-content h1{font-size: 140px; letter-spacing: 14px; color: #ffff; font-family: 'zuume-extra-bold';line-height: 140px;}
+.surface-image{position: absolute;bottom: 0;width: 100%;right: 0;padding: 0;}
+.waves-image img{width: 65%;bottom: 0;}
+.banner-img img{width: 100%;height: auto;}
+/* .waves-image{position: absolute;top: 40%;right: 0;width: 100%;} */
+.globe-side-image img{right: 20%;top: 8%; width: 100px;}
+.users .user-1{position: relative; left: 26%; width: 56%;display: inline-block;}
+.users .user-2{ position:relative;left: 16%;top: 50px; width: 65%;display: inline-block;}
+.users .user-3 img{position: relative; top: 40px; left: 0%; width: 260px;}
+.users .object-1{position: absolute;left: 60%; width: 40%;}
+.users .object-2{position: absolute;right: -6%; top: 0%; z-index: 0; width: 200px;}
+.users .object-3{position: absolute;right: 38%; top: 16%;z-index: 999;width: 150px;}
+.lady{left: 0%;top: 20%;display: inline-block;width: 50%;}
+.users .user-3{top: 10%;left: 38%;width: 50%;display: inline-block;}
+#header{position: relative;}
+.mars-side-image img{position: absolute;right: 0%;width: 600px; top: 0%;}
+/* who-we-are start */
+.who-we-are{top: 30%;}
+.who-we-are-content h2{ font-size: 90px;margin-bottom: 70px;letter-spacing: 10px;}
+.who-we-are-content p{font-size: 18px;}
+.who-we-are .mars-side-image { right: 2%;top: -0%; width: 100%; }
+.lady img{position: relative; width: 100%; left: -15%;top: -120px;}
+.who-we-are-globe img{right: 16%;top: 10%; width: 130px;}
+.who-we-are-globe-1 img{right: 10%; top: 30%; width: 110px;}
+ /* Avatar Girl Start */
+.avatar-girl .avatar{top: 0%;left: -10%;width: 100%;}
+.avatar-girl .avatar img{width: 100%;height: 100vh;}
+.avatar-girl .content{width: 480px;top: 55%;left: 29%;transform: translate(-50%,-50%);z-index: 1;}
+.avatar-girl .content h2{font-size: 90px;margin-bottom: 20px;}
+.avatar-girl .content p{font-size: 18px;}
+.avatar-girl:before{position: absolute;content: "";background-image: url("../images/Group\ 115.svg");background-repeat: no-repeat;width: 180px; height: 180px;z-index: 9999;right: 25%;top: 9%;} 
+/* Road Map Start */
+.road-map, .reveal, footer{top: 1000vh;}
+.road-map .content h2{font-size: 60px;}
+.road-map .content p{font-size: 18px;}
+}
+@media (max-width:1399px) {
+  /* .tap-to-start{width:100%; position: fixed;top: -11%;z-index: 9999;width: 100%;} */
+/* loader Area */
+.world-image{height: 400px;width: 400px;}
+.moon-image img ,.planet1-image img, .planet2-image img,.planet3-image img,.small-rocket-image img{width: 100px;} 
+/*banner  */
+.banner-img{top: -12%;}
+.banner-content h4{font-size: 21px;white-space: nowrap;}
+.banner-content h1{font-size: 130px; letter-spacing: 12px; color: #ffff; font-family: 'zuume-extra-bold';}
+/* .users{top: 0%;} */
+.users .user-1{position: relative; left: 20%;top: -20px;}
+.users .user-2{ position:relative; top: 0;}
+.users .user-3{left: 50%;top: 0;}
+.users .object-1{left: 56%;top: -18%;width: 35%;}
+.users .object-2{position: absolute;right: 3%; top: -5%; z-index: 0; width: 35%;}
+.users .object-3{width: 34%;right: 30%;top: 6%;}
+.users .object-3 img{width: 100%;height: auto;}
+.waves-image img{width: 47%;}
+#header{position: relative;}
+.globe-side-image img{right: 19%;}
+.mars-side-image img{position: absolute;right: 0%;width: 500px; top: 0%;}
+/* Road Map Start */
+.content-box-width{width: 100%;position: absolute;top: 15px;left: -95%;}
+.content-box-width strong{font-size: 45px;}
+.content-box-width p{font-size: 17px;width: 300px;}
+/* who-we-are start */
+.who-we-are-content h2{ font-size: 90px;margin-bottom: 30px;}
+.who-we-are-content p{font-size: 18px;}
+.who-we-are .mars-side-image { right: 2%;top: -0%; width: 100%; }
+.lady img{position: relative; width: 100%; left: -15%;top: -120px;}
+.who-we-are-globe img{right: 15%;top: 5%; width: 100px;}
+.who-we-are-globe-1 img{right: 10%; top: 19%; width: 100px;}
+ /* Avatar Girl Start */
+/* .avatar-girl .content{top: 55%;} */
+.avatar-girl .content h2{font-size: 90px;margin-bottom: 10px;top: -310px;}
+.avatar-girl .content p{font-size: 18px;}
+.avatar-girl:before{position: absolute;content: "";background-image: url("../images/Group\ 115.svg");background-repeat: no-repeat;width: 180px; height: 180px;z-index: 9999;right: 25%;top: 9%;} 
+/* Footer start */
+footer .content p{font-size: 16px;}
+footer ul li a{font-size: 16px;}
+footer .copyright{font-size: 16px; padding-top: 40px;}
+.road-map, .reveal, footer {top: 1200vh;}
+}
+@media (max-width:1199px) {
+/* Loader Area */
+.world-image{height: 300px;width: 300px;}
+.moon-image img ,.planet1-image img, .planet2-image img,.planet3-image img,.planet4-image img,.small-rocket-image img{width: 100px;} 
+.banner-img{top: 0;width: 112%;}
+.banner-content h1{font-size: 110px;line-height: 120px;letter-spacing: 10px;}
+.banner-content h4{font-size: 18px;letter-spacing: 11px;}
+.users .user-1 {position: relative;left: 30%;top: 10px;}
+.users .object-1 {left: 67%;top: -9%;width: 33%;}
+.users .object-3 {width: 28%;right: 41%;top: 36%;}
+.globe-side-image img {right: 22%;top: 8%;width: 85px;}
+.banner-content{left: 53%;}
+.users .user-2 {position: relative;top: 50px;}
+.mars-side-image img{width: 44%;}
+.users .object-2{right: 4%;top: 10%;}
+.users .user-3 {left: 42%;top: 65px;}
+.avatar-girl .content h2{font-size: 75px;margin-bottom: 0;top: -230px;}
+.who-we-are-content h2{font-size: 75px;margin-bottom: 0;}
+.who-we-are-content p, .avatar-girl .content p {font-size: 16px;}
+.lady{top: 33%;left: -7%;}
+.avatar-girl .content {top: 65%;left: 35%;width: 500px;}
+.container-fluid{padding-left: 15px;padding-right: 15px;} 
+/* Road Map */
+.road-map,.reveal{padding-top: 70px;}
+/* Footer start */
+footer .copyright{font-size: 12px; padding-top: 40px;} 
+.content-box-width{width: 100%;top: 25px;left: -95%;}
+.content-box-width h2{margin-bottom: 2px;}
+.content-box-width strong{font-size: 35px;margin-bottom: 1px;}
+.content-box-width p{font-size: 12px;width: 230px;}
+}
+@media (max-width:992px) {
+/* Loader Area */
+.world-image{height: 300px;width: 300px;}
+.moon-image img ,.planet1-image img, .planet2-image img,.planet3-image img,.planet4-image img,.small-rocket-image img{width: 100px;} 
+/*banner  */
+.banner-content h4{font-size: 14px;letter-spacing: 9px;}
+.banner-content h1{font-size: 85px;line-height: 90px;}
+.users .user-1{left: 10%; width: 150px;}
+.users .user-2{ top: 15px; width: 150px;}
+.users .user-3 img{top: 0px; width: 140px;}
+.users .object-1 {left: 60%;top: -5%;}
+.users .object-2 {right: -7%;top: -1%;z-index: 0;width: 100px;}
+.lady {top: 20%;}
+.avatar-girl .avatar {top: -68%;}
+.users .object-3 {right: 40%;top: 29%;z-index: 999;width: 30%;}
+.globe-side-image img {right: 26%;top: 0%;width: 11%;}
+.banner:before{display: none;}
+/* who-we-are start */
+.who-we-are-content h2{ font-size: 50px;margin-bottom: 20px;}
+.who-we-are-content p{font-size: 14px;}
+.lady img{position: relative; width: 100%; left: 0%;top: -50px;}
+.who-we-are-globe img{right: 28%;top: 10%; width: 70px;}
+.who-we-are-globe-1 img{right: 15%; top: 32%; width: 70px;}
+ /* Avatar Girl Start */
+.avatar-girl .content{width: 370px;top: 52%;left: 36%;transform: translate(-50%,-50%);z-index: 1;}
+/* .avatar-girl .content {top: 52%;} */
+.avatar-girl .content h2{font-size: 40px;margin-bottom: 5px;}
+.avatar-girl .content p{font-size: 13px;}
+.avatar-girl:before{display: none;} 
+/* Avatar Girl End*/
+/* Road Map Start */
+.road-map,.reveal{padding-top: 50px;}
+.road-map .content h2{font-size: 45px;}
+.road-map .content p{font-size: 16px;}
+.content-box-width{width: 100%;top: 25px;left: -95%;}
+.content-box-width h2{margin-bottom: 2px;}
+.content-box-width strong{font-size: 35px;margin-bottom: 1px;}
+.content-box-width p{font-size: 14px;width: 250px;}
+/* Reveal start */
+.reveal .content h2{font-size: 45px;}
+.reveal .content p{font-size: 14px;}
+/* Footer start */
+footer .content p{font-size: 14px; width: 450px;padding-top: 20px;}
+footer ul li a{font-size: 12px;}
+footer .copyright{font-size: 12px; padding-top: 10px;}
+.road-map, .reveal, footer{top: 1600vh;}
+}
+@media(max-width:767px){
+.banner-img{width: 210%;}
+.users .user-1 {left: -12%;width: 140px;}
+.users .object-1 {left: 4%;top: -13%;width: 20%;}
+.users .object-2 {right: 26%;top: -1%;width: 100px;}
+.users .user-2 {top: 15px;width: 143px;left: 34%;}
+.users .user-3 {left: 84%;top: -440px;width: 28%;display: inline-block;}
+.users .object-3 {right: 5%;top: -169%;z-index: 999;width: 18%;}
+.who-we-are {top: 60%;}
+.lady {top: -105%;left: 18%;width: 300px;}
+.avatar-girl .avatar {top: -74%;left: -25%;width: 130%;}
+.road-map, .reveal, footer {top: 1200vh;}
+.avatar-girl .content{left: 32%;}
+.road-map,.reveal{padding-top: 50px;}
+}
+@media (max-width:567px) {
+/*banner  */
+.banner-img {width: 250%;}
+.banner-content h4{font-size: 14px;white-space: normal;}
+.banner-content h1{font-size: 70px;}
+.users .user-1{left: -1%; width: 130px;top: 50px;}
+.users .user-3 img{top: 0px; width: 150px;}
+.users .object-1 {left: 18%;top: 6%;width: 17%;}
+.users .object-3 {right: 14%;top: -172%;}
+.users .user-2 {top: 35px;width: 140px;left: 33%;}
+.users .object-2 {right: 28%;top: 8%;width: 90px;}
+.who-we-are{max-width: none;top: 56%;}
+.users .user-3 {left: 76%;top: -383px;width: 26%;}
+.banner:before{display: none;}
+/* who-we-are start */
+.who-we-are-content h2{ font-size: 50px;margin-bottom: 20px;}
+.who-we-are-content p{font-size: 14px;}
+.lady {display: none;}
+.who-we-are-globe img{right: 35%;top: 3%; width: 100px;}
+.who-we-are-globe-1 img{right: 10%; top: 15%; width: 70px;}
+ /* Avatar Girl Start */
+.avatar-girl .avatar{display: none;}
+.avatar-girl .content{width: 80%;position: relative;top: 90%;left: 50%;transform: translate(-50%,-50%);z-index: 1;}
+.avatar-girl .content h2{font-size: 40px;margin-bottom: 30px;}
+.avatar-girl .content p{font-size: 14px;}
+.avatar-girl:before{display: none;} 
+/* Avatar Girl End*/
+/* Road Map Start */
+.road-map,.reveal{padding-top: 50px;}
+.road-map .content h2{font-size: 46px;}
+.road-map .content p{font-size: 15px;}
+/* Reveal start */
+.reveal .content h2{font-size: 50px;}
+.reveal .content p{font-size: 16px;}
+}
+@media (max-width:480px) {
+/* Loader */
+.world-image{height: 300px;width: 300px;}
+.moon-image img ,.planet1-image img, .planet2-image img,.planet4-image img,.planet3-image img,.small-rocket-image img{display: none;} /*banner  */
+/*banner  */
+.banner-content {top: 57%;}
+.banner-img {width: 320%;}
+.banner-content h4{font-size: 15px;letter-spacing: 5px; white-space: normal;}
+.banner-content h1{font-size: 65px;}
+.users .user-1{left: 0;top: 40px; width: 100px;}
+.users .user-2{ left: 21%;top: 190px;width: 110px;}
+.users .user-3 img{top: 0px; width: 100px;}
+.users .object-1{left: 19%;top: 6%;}
+.users .object-2{right: 38%;top: 92%;width: 80px;}
+.users .object-3{right: 13%;top: -225%;width: 65px;}
+.globe-side-image img{display: none;}
+.banner:before{display: none;}
+/* who-we-are start */
+.who-we-are {top: 52%;}
+.who-we-are-content h2{ font-size: 50px;margin-bottom: 20px;}
+.who-we-are-content p{font-size: 14px;}
+.lady img{position: relative; width: 100%; left: 0%;top: -50px;}
+.who-we-are-globe img{right: 35%;top: 3%; width: 100px;}
+.who-we-are-globe-1 img{right: 10%; top: 15%; width: 70px;}
+ /* Avatar Girl Start */
+.avatar-girl .content{width: 80%;}
+.avatar-girl .content h2{font-size: 40px;margin-bottom: 30px;}
+.avatar-girl .content p{font-size: 14px;}
+.avatar-girl:before{display: none;} 
+/* Avatar Girl End*/
+/* Road Map Start */
+.road-map .content h2{font-size: 40px;}
+.road-map .content p{font-size: 13px;}
+.content-box-width{width: 100%;top: 5px;left: 8%;}
+.content-box-width h2{margin-bottom: 2px;}
+.content-box-width strong{font-size: 25px;margin-bottom: 1px;}
+.content-box-width p{font-size: 12px;width: 200px;}
+/* Reveal start */
+.reveal .content h2{font-size: 40px;}
+.reveal .content p{font-size: 14px;}
+/* Footer start */
+footer{padding-top: 20px;}
+footer .content p{font-size: 14px;width: 100%;text-align: center;}
+footer ul li {text-align: center;}
+footer ul li a{font-size: 13px;}
+footer .copyright{font-size: 12px; padding-top: 30px;}
+}
+@media (max-width:367px) {
+/* Loader */
+.world-image{height: 200px;width: 200px;}
+.moon-image img ,.planet1-image img, .planet2-image img,.planet4-image img,.planet3-image img,.small-rocket-image img{display: none;} /*banner  */
+/*banner  */
+.banner-img {width: 430%;}
+.banner-content h4{font-size: 15px;letter-spacing: 3px; white-space: normal;}
+.banner-content h1{font-size: 60px;letter-spacing: 7px;line-height: 75px;}
+.users .user-3 img{top: 0px; width: 150px;}
+.users .object-1 {left: 24%;top: 10%;}
+.users .object-2 {right: 31%;top: 94%;width: 75px;}
+.users .user-3 {left: 76%;top: -350px;width: 26%;}
+.users .object-3 {top: -230%;top: -245%;width: 65px;}
+.road-map, .reveal, footer{top: 1100vh;}
+.banner:before{display: none;}
+/* who-we-are start */
+.who-we-are-content h2{ font-size: 50px;margin-bottom: 20px;}
+.who-we-are-content p{font-size: 14px;}
+.lady img{position: relative; width: 100%; left: 0%;top: -50px;}
+.who-we-are-globe img{right: 35%;top: 3%; width: 100px;}
+.who-we-are-globe-1 img{right: 10%; top: 15%; width: 70px;}
+.who-we-are{width: 90%;}
+.avatar-girl .content{top: 90%;width: 90%;}
+ /* Avatar Girl Start */
+.avatar-girl .content h2{font-size: 40px;margin-bottom: 30px;}
+.avatar-girl .content p{font-size: 14px;}
+.avatar-girl:before{display: none;} 
+/* Avatar Girl End*/
+/* Road Map Start */
+.road-map .content h2{font-size: 40px;}
+.road-map .content p{font-size: 12px;}
+.content-box-width{width: 100%;top: 5px;left: 8%;}
+.content-box-width h2{margin-bottom: 2px;}
+.content-box-width strong{font-size: 25px;margin-bottom: 1px;}
+.content-box-width p{font-size: 12px;width: 180px;}
+/* Reveal start */
+.reveal .content h2{font-size: 35px;}
+.reveal .content p{font-size: 13px;}
+}

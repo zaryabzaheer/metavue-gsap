@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="62.842" height="61.02" viewBox="0 0 62.842 61.02">
+  <g id="Rocket" transform="matrix(0.743, -0.669, 0.669, 0.743, -1488.721, 977.442)">
+    <g id="Group_40" data-name="Group 40" transform="translate(1739.427 293.03)">
+      <path id="Path_700" data-name="Path 700" d="M1749.456,303.558s-1.7-6.9-10.029-6.765c3.944-4.76,19.242-6.663,23.172,4.487Z" transform="translate(-1739.427 -293.03)" fill="#00acff"/>
+      <path id="Path_701" data-name="Path 701" d="M1749.456,383.906s-1.7,6.9-10.029,6.765c3.944,4.759,19.242,6.663,23.172-4.488Z" transform="translate(-1739.427 -354.444)" fill="#00acff"/>
+      <path id="Path_702" data-name="Path 702" d="M1805.085,329.471c-19.1,14.893-36.632,13-48.236,7.465V318.923c11.6-5.535,29.135-7.422,48.236,7.468A1.953,1.953,0,0,1,1805.085,329.471Z" transform="translate(-1751.201 -307.776)" fill="#fff"/>
+      <circle id="Ellipse_19" data-name="Ellipse 19" cx="7.09" cy="7.09" r="7.09" transform="translate(28.013 13.084)" fill="#00acff"/>
+      <circle id="Ellipse_20" data-name="Ellipse 20" cx="4.81" cy="4.81" r="4.81" transform="translate(30.293 15.364)" fill="#7b528f"/>
+      <path id="Path_703" data-name="Path 703" d="M1762.692,351.1l-4.625.42a26.761,26.761,0,0,1-4.049.06l-8.849-.541a2.453,2.453,0,0,1-2.3-2.448h0a2.453,2.453,0,0,1,2.305-2.448l8.993-.543a26.736,26.736,0,0,1,4.073.065l4.459.412a2.453,2.453,0,0,1,2.227,2.443v.139A2.453,2.453,0,0,1,1762.692,351.1Z" transform="translate(-1741.75 -328.523)" fill="#00acff"/>
+    </g>
+  </g>
+</svg>
